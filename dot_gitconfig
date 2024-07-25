@@ -1,0 +1,20 @@
+[user]
+  email = 145390016+bhoggard-sothebys@users.noreply.github.com
+  name = Barry Hoggard
+[push]
+  default = current
+[core]
+  excludesfile = ~/.gitignore
+[pager]
+  branch = false
+[pull]
+  rebase = false
+[init]
+  defaultBranch = main
+[filter "lfs"]
+  smudge = git-lfs smudge -- %f
+   process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+[credential "https://github.com"]
+  helper = !/usr/bin/gh auth git-credential
